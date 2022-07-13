@@ -1,0 +1,145 @@
+body{
+    font-family: 'Montserrat';
+    padding: 15px;
+    background-image: url("https://besthqwallpapers.com/Uploads/13-2-2021/154552/thumb2-blackboard-school-texture-blackboard-background-gray-texture-blackboard-texture.jpg");
+    height: 200%;
+    width: 100%;
+    color: #f8f9fa;
+}
+
+header {
+    width: 100%;
+    height: 80%;
+    padding: 0;
+    margin: 0;
+    color: #f8f9fa;
+    list-style: none;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-left-section {
+list-style: none;
+justify-self: left;
+display: flex;
+align-items: center;
+width: 250px;
+height: 5px;
+}
+
+
+
+.nav-right-section {
+    justify-self: right;
+    width: 250px;
+    height: 5px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-right-section a {
+    margin-right: 10px;
+    color: #f8f9fa;
+}
+
+header h1 {
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+
+
+.Hamburguesa_foto{
+    max-width: 50%;
+    max-height: 50%;
+    margin-top: 20px;
+}
+
+.information {
+    width: 20%;
+    display: inline-block;
+    font-size: 20px;
+    height: 100%;
+    margin-top: 90px;
+    margin-left: 30px;
+    color:rgb(29, 28, 28);
+}
+
+
+.pago-tc {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 10px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    width: 200px;
+    height: 200px;
+    line-height: 120px;
+    text-align: center;
+}
+
+.information-table {
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    padding: 3px;
+}
+
+.information-table thead th {
+    background-color: rgb(160, 157, 157);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 23px;
+    color: rgb(29, 28, 28);
+}
+
+.information-table tbody tr:first-child {
+    text-align: center;
+}
+
+.information-table tbody th {
+    text-align: left;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: auto;
+    font-size: 15px;
+    color: #f8f9fa;
+}
+
+footer ul {
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0; 
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+
+footer .footer-right {
+    justify-self: right;
+}
+
+footer ul li a {
+    margin: 20px;
+    color: #f8f9fa;
+}
+
+.image2 {
+    width: 60px;
+    height: 60px;
+}
+
+.image3 {
+    width: 60px;
+    height: 80px;   
+}
