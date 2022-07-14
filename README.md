@@ -28,7 +28,7 @@
 
 ## 5. Prototipo a lapiz
 
-[![Prototipo a lapiz](\Users\UserOne\OneDrive\Escritorio\katherine\LABORATORIA\PROJECT_TC\BOG005-card-validation "Primer borrador")](https://drive.google.com/file/d/1wyKzSI3tJy-ULEAMiJRWttrlvMt5ggUO/view)
+[![Prototipo a lapiz](/img/Prototipo%20a%20lapiz.jpeg)]
 
 
 ***
