@@ -20,7 +20,7 @@
           <a href="https://wa.me/c/573146616051" target="_blank" id="menu">Menú</a>
         </li>  
       </ul>
-    </nav>
+    
       <hr>
     </div>
     </header>
@@ -59,65 +59,170 @@
       </table>
     </main>
   </section>
+
+  <br>
+
+  <!-- Numero de la tarjeta -->
+  <form>
+    <label for="cardNumber">Número<br></label>
+    <input
+      type="text"
+      id="cardNumber"
+      placeholder="Número"
+      name="cardNumber"
+      autocomplete="off"
+      maxlength="16"
+      required
+    />
+  </form>
+
+  <br>
+
+  <!-- Nombre del titular -->
+  <form>
+    <label for="cardName">Nombre<br></label>
+    <input
+      type="text"
+      id="cardName"
+      placeholder="Nombre"
+      name="cardName"
+      maxlength="30"
+      autocomplete="off"
+      required
+    />
+  </form>
+
+  <br>
+
+  <!-- Codigo de seguridad -->
+  <form>
+    <label for="securityCode">Código de seguridad<br></label>
+    <input
+      type="text"
+      id="securityCode"
+      placeholder="Código de seguridad"
+      name="securityCode"
+      maxlength="3"
+      autocomplete="off"
+      required
+    />
+  </form>
+  
+  <br>
+
+  <!-- Fecha de expiración -->
+  <form>
+    <label for="dateExpire">Fecha de expiración<br></label>
+    <input
+      type="text"
+      id="dateExpire"
+      placeholder="Fecha de expiración"
+      name="dateExpire"
+      maxlength="4"
+      autocomplete="off"
+      required
+    />
+  </form>
+
+  <br>
+
+  <button type="sendData" onclick="validateCreditCard()">Enviar</button>
+
+  <!--Aca se llama al archivo -->
+  <script src="index.js"></script>
     
 
 
 <!-- Formulario -->
-  <aside class="formulario-pago">
+  
       <form action="" class="formulario" id="formulario">
+        <div class="tituloF">
+          <label for="tittleForm">Pago con tarjeta de crédito</label>
+        </div> 
+        <hr>
 
-        <!-- input nombre titular -->
+        <!-- input nombre titular
         <div class="datos">
-          <label for="inputName">Nombre Titular</label>
-          <input type="text" id="inputName" maxlength="30" autocomplete="off">
+          <label for="nombre">Nombre del Titular</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Como aparece en la tarjeta" size="35" maxlength="30" autocomplete="off" required="required">
         </div>
 
-
-         <!-- input numero tarjeta -->
+        <br>
+      -->
+         <!-- input numero tarjeta 
          <div class="datos">
-          <label for="inputNumber">Número Tarjeta</label>
-          <input type="text" id="inputNumber" maxlength="16" autocomplete="off">
+          <label for="numero">Número Tarjeta</label>
+          <input type="number" name="numero" id="numero" maxlength="16" size="35" autocomplete="off" required="required">
         </div>
-
-        <!-- fecha de expiracion -->
+<br>
+-->
+        <!-- fecha de expiracion 
         <div class="grupo expira">
-          <label for="selectMes">Fecha de Expiración</label>
+          <label for="selectMes">Fecha de Expiración</label> <br>
           <div class="flexbox">
             <div class="grupo-select">
+             <p>Mes:</p>
               <select name="mes" id="selectMes">
-                <option disabled selected>Mes</option>
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+                <option value="Abril">Abril</option>
+                <option value="Mayo">Mayo</option>
+                <option value="junio">Junio</option>
+                <option value="julio">Julio</option>
+                <option value="agosto">Agosto</option>
+                <option value="septiembre">Septiembre</option>
+                <option value="octubre">Octubre</option>
+                <option value="noviembre">Noviembre</option>
+                <option value="diciembre">Diciembre</option>
               </select>
-              <i class="fa-solid fa-sort-down"></i>
+              
             </div>
             <div class="grupo-select">
+              <p>Año:</p>
               <select name="year" id="selectYear">
-                <option disabled selected>Año</option>
+                <option >2022</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
               </select>
-              <i class="fa-solid fa-sort-down"></i>
-            </div>
+            </div><br>
+            -->
 
 
-            <!-- Codigo de seguridad -->
-            <div class="grupo ccv">
-              <label for="inputCCV">Código de Seguridad</label>
-              <input type="text" name="" id="inputCCV" maxlength="3">
+            <!-- Codigo de seguridad 
+            <div class="grupo cvv">
+              <label for="inputCVV">Código de Seguridad</label><br>
+              <input type="text" name="inputCCV" id="inputCCV" placeholder="3 digitos" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/ required="required">
             </div>
           </div>
-        </div>
-        <button type="submit" class="btn-enviar">Pagar Orden</button>
-      </form> 
-    </aside>
- 
+        </div><br>
+        -->
 
-    <!-- Barra inferior final de la pagina  -->
+        <!-- boton enviar pago 
+
+        <button type="submit" class="btn-enviar" id="enviar" onclick="validarFormulario()">Pagar</button>
+      </form> 
+      -->
+    
+      <!--
  <footer class="barra-inferior">  
   <ul class="lista-inferior">
       <li class="ubicacion-icon">
         <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="" class="image2"> Parque Villa Helena, Cartago, Valle del Cauca - Colombia
       </li>
    </ul>
-    </footer>
+    </footer> 
+  -->
 
-    <script src="index.js" type="module"></script>
+  <!--
+    <script src="index.js" type="module"></script> 
+-->
   </body>
 </html>

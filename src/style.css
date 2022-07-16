@@ -9,6 +9,9 @@ body{
 
 header {
     background: url(https://i.pinimg.com/236x/3a/0b/3b/3a0b3b9fe6848dc6d095cee1ebccccc7--fall-backgrounds-iphone-wallpaper-backgrounds.jpg);
+    width: 2000px;
+    background-size: 100% 100%;
+    margin: -20px 0 50px -20px;
 }
 
 h1 {
@@ -17,11 +20,9 @@ h1 {
     width: 100%;
     height: 100%;
     padding: 20px;
-    margin: 15px;
-    margin-bottom: 3px;
-    margin-top: 20px;
-    text-align: justify;
-    font-size: 40px;
+    margin: 20px 50px 0 20px;
+    text-align: center;
+    font-size: 60px;
 }
 
 .header_logo {
@@ -42,8 +43,7 @@ h1 {
     background-size: 100% auto;
   }
   
-
-.nav-right-section a {
+a {
     width: 200px;
     height: 5px; 
     justify-content: right;
@@ -70,27 +70,32 @@ ul {
 }
 
 .information {
-    width: 20%;
+    width: 70%;
+    max-width: 35%;
     display: inline-flex;
     font-size: 20px;
     height: 100%;
     margin-top: 90px;
     margin-left: 30px;
     color:rgb(29, 28, 28);
+    
 }
 
 .information-table {
     border: 1px solid #a2a9b1;
     background-color: #f8f9fa;
     padding: 3px;
+    border-radius: 20px;
 }
 
 .information-table thead th {
     background-color: rgb(160, 157, 157);
     padding-top: 3px;
     padding-bottom: 3px;
-    font-size: 23px;
+    font-size: 26px;
     color: rgb(29, 28, 28);
+    border-radius: 10px;
+    border: solid 1px #a2a9b1;
 }
 
 .information-table tbody tr:first-child {
@@ -110,6 +115,7 @@ li{
     float: none;
     margin-left: 30px;
 }
+
 .barra-inferior {
     width: 100%;
     height: 80px;
@@ -131,4 +137,88 @@ li{
     width: 60px;
     height: 80px;   
 }
+
+.formulario {
+    background: white;
+    width: 100%;
+    max-width: 30%;
+    height: 100%;
+    padding: 40px 40px 40px 40px;
+    border-radius: 20px;
+    position: relative;
+    top: -480px;
+    margin: -10px 1em 0 800px;
+    font-size: 22px;
+    color: black;
+}
+
+.tituloF{
+    text-align: center;
+    font-weight: bolder
+}
+
+.formulario label{
+    display: block;
+    margin-bottom: 5px
+}
+
+input{
+    border-radius: 3px;
+    border: solid 1px #a2a9b1;
+    height: 30px;
+}
+
+
+#nombre{
+    padding: 8px;
+    width: 300px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+#inputNumber{
+    padding: 8px;
+    width: 300px;
+}
+
+.formulario select{
+    
+    width: 100%;
+    
+    color: black;
+}
+
+.formulario .flexbox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formulario .grupo-select {
+    margin-right: 15px;
+}
+
+
+.cvv {
+    margin-top: 20px;
+}
+
+#inputCVV{
+    width: 40%;
+    padding: 10px;
+    height: 20px;
+}
+
+
+.btn-enviar{
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(160, 157, 157);
+    padding: 10px;
+    width: 600px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.726);
+    text-align: center;
+    cursor: pointer;
+}
+
 
