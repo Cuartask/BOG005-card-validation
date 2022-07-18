@@ -25,8 +25,6 @@
     </div>
     </header>
 
-
-
       <!-- Tabla  -->
       <section class="section-right">
       <main class="information">
@@ -60,158 +58,47 @@
     </main>
   </section>
 
-  <br>
-
-  <!-- Numero de la tarjeta -->
-  <form>
-    <label for="cardNumber">Número<br></label>
-    <input
-      type="text"
-      id="cardNumber"
-      placeholder="Número"
-      name="cardNumber"
-      autocomplete="off"
-      maxlength="16"
-      required
-    />
-  </form>
-
-  <br>
-
-  <!-- Nombre del titular -->
-  <form>
-    <label for="cardName">Nombre<br></label>
-    <input
-      type="text"
-      id="cardName"
-      placeholder="Nombre"
-      name="cardName"
-      maxlength="30"
-      autocomplete="off"
-      required
-    />
-  </form>
-
-  <br>
-
-  <!-- Codigo de seguridad -->
-  <form>
-    <label for="securityCode">Código de seguridad<br></label>
-    <input
-      type="text"
-      id="securityCode"
-      placeholder="Código de seguridad"
-      name="securityCode"
-      maxlength="3"
-      autocomplete="off"
-      required
-    />
-  </form>
+  <!-- Formulario -->
   
-  <br>
+  <form action="" class="formulario" id="formulario">
+    <div class="tituloF">
+      <label for="tittleForm">Pago con tarjeta de crédito</label>
+    </div> 
+    <hr>
 
-  <!-- Fecha de expiración -->
-  <form>
-    <label for="dateExpire">Fecha de expiración<br></label>
-    <input
-      type="text"
-      id="dateExpire"
-      placeholder="Fecha de expiración"
-      name="dateExpire"
-      maxlength="4"
-      autocomplete="off"
-      required
-    />
-  </form>
+   <!-- Nombre del titular -->
+   <div class="nombre">
+    <label for="cardName">Nombre del Titular<br></label>
+    <input type="text" id="cardName" placeholder="Tal como aparece en la tarjeta" name="cardName" maxlength="30" autocomplete="off" required="required"/>
+  </div>
+    <br>
 
-  <br>
+      <!-- Numero de la tarjeta -->
 
-  <button type="sendData" onclick="validateCreditCard()">Enviar</button>
-
-  <!--Aca se llama al archivo -->
-  <script src="index.js"></script>
-    
-
-
-<!-- Formulario -->
-  
-      <form action="" class="formulario" id="formulario">
-        <div class="tituloF">
-          <label for="tittleForm">Pago con tarjeta de crédito</label>
-        </div> 
-        <hr>
-
-        <!-- input nombre titular
-        <div class="datos">
-          <label for="nombre">Nombre del Titular</label>
-          <input type="text" name="nombre" id="nombre" placeholder="Como aparece en la tarjeta" size="35" maxlength="30" autocomplete="off" required="required">
-        </div>
-
-        <br>
-      -->
-         <!-- input numero tarjeta 
-         <div class="datos">
-          <label for="numero">Número Tarjeta</label>
-          <input type="number" name="numero" id="numero" maxlength="16" size="35" autocomplete="off" required="required">
+         <div class="numero">
+          <label for="cardNumber">Número<br></label>
+    <input type="text" id="cardNumber" placeholder="Digite los números de su tarjeta" name="cardNumber" autocomplete="off" maxlength="16" required="required"/>
         </div>
 <br>
--->
-        <!-- fecha de expiracion 
-        <div class="grupo expira">
-          <label for="selectMes">Fecha de Expiración</label> <br>
-          <div class="flexbox">
-            <div class="grupo-select">
-             <p>Mes:</p>
-              <select name="mes" id="selectMes">
-                <option value="enero">Enero</option>
-                <option value="febrero">Febrero</option>
-                <option value="Marzo">Marzo</option>
-                <option value="Abril">Abril</option>
-                <option value="Mayo">Mayo</option>
-                <option value="junio">Junio</option>
-                <option value="julio">Julio</option>
-                <option value="agosto">Agosto</option>
-                <option value="septiembre">Septiembre</option>
-                <option value="octubre">Octubre</option>
-                <option value="noviembre">Noviembre</option>
-                <option value="diciembre">Diciembre</option>
-              </select>
-              
-            </div>
-            <div class="grupo-select">
-              <p>Año:</p>
-              <select name="year" id="selectYear">
-                <option >2022</option>
-                <option>2021</option>
-                <option>2020</option>
-                <option>2019</option>
-                <option>2018</option>
-                <option>2017</option>
-                <option>2016</option>
-                <option>2015</option>
-                <option>2014</option>
-                <option>2013</option>
-              </select>
-            </div><br>
-            -->
+
+  <!-- Fecha de expiración -->
+  <div class="grupo expira">
+    <label for="dateExpire">Fecha de expiración<br></label>
+    <input type="text" id="dateExpire" placeholder="Fecha de expiración" name="dateExpire" maxlength="4" autocomplete="off" required="required"/>
+  </div>
+  <br>
+
+    <!-- Codigo de seguridad -->
+    <div class="grupo cvv">
+    <label for="securityCode">Código de seguridad<br></label>
+    <input type="text" id="securityCode" placeholder="Código de seguridad" name="securityCode" maxlength="3" autocomplete="off" required="required"/>  
+  </div>
+  <br>
 
 
-            <!-- Codigo de seguridad 
-            <div class="grupo cvv">
-              <label for="inputCVV">Código de Seguridad</label><br>
-              <input type="text" name="inputCCV" id="inputCCV" placeholder="3 digitos" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/ required="required">
-            </div>
-          </div>
-        </div><br>
-        -->
-
-        <!-- boton enviar pago 
-
-        <button type="submit" class="btn-enviar" id="enviar" onclick="validarFormulario()">Pagar</button>
-      </form> 
-      -->
-    
-      <!--
+  <button type="sendData" id="enviar" onclick="validateCreditCard()">Enviar</button>   
+  </form>
+  
  <footer class="barra-inferior">  
   <ul class="lista-inferior">
       <li class="ubicacion-icon">
@@ -221,8 +108,9 @@
     </footer> 
   -->
 
-  <!--
-    <script src="index.js" type="module"></script> 
--->
+ <!--Aca se llama al archivo -->
+ <script src="index.js"></script>
+
+
   </body>
 </html>
