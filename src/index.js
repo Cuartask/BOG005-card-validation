@@ -1,99 +1,53 @@
+import validator from './validator.js';  
 
-// //funcion para capturar los datos del HTML y resaltar los campos vacios para que el usuario los rellene
-// let datos = function (numero, nombre, cvv){
-//     console.log ("hola");
+//funcion para que me guarde el valor digitado por el usuario en el input dentro de la variable creditCardNumber
+let boton = document.getElementById("enviar");
+boton.addEventListener("click", enviarFormulario);
 
-//     let numero = document.getElementById("numero").value;
-//     let nombre = document.getElementById("nombre").value;
-//     let cvv = document.getElementById("cvv").value;
+function enviarFormulario() {
+    let creditCardNumber = document.getElementById("cardNumber").value;
     
-//     console.log(numero);
+    //AQUI VALIDO DE ACUERDO AL RESULTADO DE ISVALID SI ES VERDADERO O FALSO PARA INDICAR SI ES VALIDA O NO LA TARJETA DE CREDITO EN UN PARRAFO VERDE O ROJO
+    let confirmValidator = document.getElementById("result");
+    let resultValidator = validator.isValid(creditCardNumber);
+    //confirmValidator.innerText = resultValidator;
+    if(creditCardNumber !== undefined || creditCardNumber !== "") {
 
-// document.querySelector("#enviar").addEventListener("click", datos());
+        document.getElementById("cardNumber").value =  validator.maskify(creditCardNumber)
 
-
-
-/*let card = creditCard(
-    document.getElementById("numero").value,
-    document.getElementById("numero").value,
-    document.getElementById("numero").value
-    document.getElementById("numero").value
-);*/
-//validar campos vacios del formulario
-//let numero = document.getElementById("numero").value;
-//let nombre = document.getElementById("nombre").value;
-//let cvv = document.getElementById("cvv").value;
-
-/*function enviar_formulario(){
-    return false;
-
-    if (documento.formulario.numero.value === "") {
-        alert("Por favor ingrese el numero de su tarjeta de crédito");
-    } 
-    if (documento.formulario.nombre.value === "") {
-    alert("Por favor ingrese su nombre");
-    }
-    if (documento.formulario.cvv.value === "") {
-    alert("Por favor ingrese su digito de verificación");
-}
-}*/
-
-// NUEVO INTENTO 
-
-//Object de la tarjeta de credit
-function creditCard(cardName, numberCard, dateExpire, securityCode){
-    return{
-        numberCard,
-        cardName,
-        dateExpire,
-        securityCode
-    };
-}
-
-
-//funcion que valida los campos ingresados en el HTML y asigna por parametro los valores al Object creditCard
-//Esta funcion se llama desde el boton enviar en el HTML
-function validateCreditCard(){
-    // Creo el objeto card para usarlo en los if
-    let card = creditCard(
-      document.getElementById("cardNumber").value,
-      document.getElementById("cardName").value,
-      document.getElementById("dateExpire").value,
-      document.getElementById("securityCode").value,)
-
-      //Este primer if valida el primer campo (Numero de tarjeta) si no esta null o vacio y si realmente ingreso numeros y no texto
-      //tambien valida que sea de 16 digitos
-      if(card.numberCard != null && card.numberCard != undefined && /\d/.test(card.numberCard) && card.numberCard.length == 16){
-
-        //Este segundo if valida que no este null o vacio el campo y que realmente sea texto, tambien valida la longitud del texto de 30 caracteres
-        if(card.cardName !=null && card.cardName !=undefined && !/\d/.test(card.cardName) && card.cardName.length <= 30){
-
-            //Este tercer if valida la fecha de expiracion de la tarjeta (lo hice solo con numeros) tambien valida que no sea null o vacia
-          if(card.dateExpire != null && card.dateExpire != undefined && /\d/.test(card.dateExpire) &&  card.dateExpire.length == 4){
-
-            //Este if hace lo mismo del anterior pero como el codigo de seguridad es 3 digitos entonces compara que sea 3 digitos
-            if(card.securityCode != null && card.securityCode != undefined && /\d/.test(card.dateExpire) && card.securityCode.length == 3){
-              alert("creditCard is valid")
-            }
-          }
+        if (resultValidator === true) {
+            confirmValidator.style.color = "green";
+            confirmValidator.innerText   = "Tu tarjeta es válida"
+        }else {
+            confirmValidator.style.color = "red";    
+            confirmValidator.innerText = "Tu tarjeta es inválida"
         }
-      }
-      else{
-
-        alert("creditCard number is not valid")
-      }
+    }
 }
-document.querySelector("#enviar").addEventListener("click", validateCreditCard());
 
+//DECLARE DOS VARIABLES UNA PARA CCV Y OTRA PARA EL NUMERO DE LA TARJETA Y QUE AL PRESIONAR LAS TECLAS DE NUMERO EVALUA LA FUNCION LIMITSIZE CON EL PARAMETRO DE LONGITUD MAXIMO ASIGNADO A CADA UNO (CCV=>3 CARACTERES) (CARDNUMBER=>16 CARACTERES)
 
+let ccv = document.getElementById("securityCode");
+ccv.addEventListener("keypress", (e) => limitSize(e, 2));
 
+let cardNumber = document.getElementById("cardNumber");
+cardNumber.addEventListener("keypress", (e) => limitSize(e, 15));
 
-//validar que me tome como numero el input del numero de la tarjeta de credito
-// function validarNumero(valor){
-//     number = parseInt(number)
-//     if (isNaN(number)) {
-//         return ""
-//       }else{
-//         return number
-//       }
-// }
+function limitSize(event, maxLength) {
+    console.log(event.target.value);
+    if(event.target.value.length > maxLength) {
+        event.preventDefault();
+    }
+}
+
+//Que al ingresar texto valida por medio de codigo ascii si son solo numeros de lo contrario no escribe los demas caracteres. 
+cardNumber.addEventListener("keypress", onlyNumberKey);
+
+function onlyNumberKey(evt) {
+          
+    // Only ASCII character in that range allowed
+    var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+    if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+        evt.preventDefault();
+    }
+}

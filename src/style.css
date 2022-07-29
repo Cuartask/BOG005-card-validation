@@ -1,8 +1,9 @@
+
 body{
     font-family: 'Montserrat';
     padding: 15px;
     background-image: url("https://us.123rf.com/450wm/peekeedee1/peekeedee11710/peekeedee1171000152/87926975-textura-de-madera-negro-o-textura-de-fondo-de-patr%C3%B3n-de-madera.jpg?ver=6");
-    height: 200%;
+    height: 100%;
     width: 100%;
     color: #f8f9fa;
 }
@@ -166,6 +167,7 @@ input{
     border-radius: 3px;
     border: solid 1px #a2a9b1;
     height: 30px;
+    width: 200px;
 }
 
 
@@ -184,7 +186,6 @@ input{
 .formulario select{
     
     width: 100%;
-    
     color: black;
 }
 
@@ -198,26 +199,16 @@ input{
 }
 
 
-.cvv {
-    margin-top: 20px;
-}
-
-#inputCVV{
-    width: 40%;
-    padding: 10px;
-    height: 20px;
-}
-
-
-.btn-enviar{
+button {
     border-radius: 5px;
     border: none;
     background-color: rgb(160, 157, 157);
     padding: 10px;
     width: 600px;
+    height: 50px;
+    margin-top: 20px;
     font-size: 20px;
-    color: rgba(0, 0, 0, 0.726);
-    text-align: center;
+    color: rgba(0, 0, 0, 0.884);
     cursor: pointer;
 }
 

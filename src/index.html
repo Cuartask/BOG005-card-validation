@@ -58,47 +58,67 @@
     </main>
   </section>
 
+  <br>
   <!-- Formulario -->
-  
-  <form action="" class="formulario" id="formulario">
+ <form action="" class="formulario" id="formulario">
     <div class="tituloF">
       <label for="tittleForm">Pago con tarjeta de crédito</label>
     </div> 
-    <hr>
+    <hr> 
 
    <!-- Nombre del titular -->
    <div class="nombre">
     <label for="cardName">Nombre del Titular<br></label>
-    <input type="text" id="cardName" placeholder="Tal como aparece en la tarjeta" name="cardName" maxlength="30" autocomplete="off" required="required"/>
+    <input type="text" id="cardName" placeholder="Tal como aparece en la tarjeta" name="cardName" maxlength="30" autocomplete="off" required>
   </div>
-    <br>
 
-      <!-- Numero de la tarjeta -->
+    <br> 
 
-         <div class="numero">
-          <label for="cardNumber">Número<br></label>
-    <input type="text" id="cardNumber" placeholder="Digite los números de su tarjeta" name="cardNumber" autocomplete="off" maxlength="16" required="required"/>
+    <!-- Numero de la tarjeta -->
+     <div class="numero">
+      <label for="cardNumber">Número<br></label>
+      <input type="text"   id="cardNumber" placeholder="Digite los números de su tarjeta" name="cardNumber" autocomplete="off" required>
+      <p id="result"></p>
         </div>
-<br>
+        
+<br> 
 
   <!-- Fecha de expiración -->
   <div class="grupo expira">
     <label for="dateExpire">Fecha de expiración<br></label>
-    <input type="text" id="dateExpire" placeholder="Fecha de expiración" name="dateExpire" maxlength="4" autocomplete="off" required="required"/>
+    <input type="month" id="dateExpire" placeholder="mes y año" name="dateExpire" required>
   </div>
-  <br>
+  <br> 
 
-    <!-- Codigo de seguridad -->
-    <div class="grupo cvv">
-    <label for="securityCode">Código de seguridad<br></label>
-    <input type="text" id="securityCode" placeholder="Código de seguridad" name="securityCode" maxlength="3" autocomplete="off" required="required"/>  
+  <!-- Codigo de seguridad -->
+  <div class="grupo cvv">
+  <label for="securityCode">Código de seguridad<br></label>
+  <input type="number" id="securityCode" name="securityCode" maxlength="3" autocomplete="off" required>
   </div>
-  <br>
 
-
-  <button type="sendData" id="enviar" onclick="validateCreditCard()">Enviar</button>   
-  </form>
+  <!-- BOTON DE ENVIAR FORMULARIO -->
   
+  <button type="button" id="enviar" value="button">Enviar</button> 
+</form>
+  <br> 
+  
+
+
+
+  <!-- PRUEBA -->
+  <!-- <form action="">
+    <label for="usuario"> usuario</label>
+    <input type="text" id="usuario" name="usuario"></input>
+
+    <label for="password">password</label>
+    <input type="text" id="password" name="password"</input>
+  </form>
+
+  <button type="submit" id="login" name="login" value="login">Login</button>
+  <div id="mostrar-list-numbers"></div> -->
+
+
+
  <footer class="barra-inferior">  
   <ul class="lista-inferior">
       <li class="ubicacion-icon">
@@ -106,10 +126,10 @@
       </li>
    </ul>
     </footer> 
-  -->
+ 
 
- <!--Aca se llama al archivo -->
- <script src="index.js"></script>
+
+ <script src="./index.js" type="module"></script>
 
 
   </body>
