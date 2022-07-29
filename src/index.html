@@ -65,7 +65,8 @@
 
   <br>
   <!-- Formulario -->
-  <form action="" class="formulario" name="formulario" id="formulario" onsubmit="return checar()">
+  <form action="" class="formulario" name="formulario" id="formulario" >
+    <h3 id="error"></h3>
     <div class="tituloF">
       <label for="tittleForm">Pago con tarjeta de crédito</label>
     </div>
@@ -75,7 +76,7 @@
     <div class="nombre">
       <label for="cardName">Nombre del Titular<br></label>
       <input type="text" id="cardName" placeholder="Tal como aparece en la tarjeta" name="cardName" maxlength="30"
-        autocomplete="off" required="required">
+        autocomplete="off" required>
     </div>
 
     <br>
@@ -84,7 +85,7 @@
     <div class="numero">
       <label for="cardNumber">Número<br></label>
       <input type="text" id="cardNumber" placeholder="Digite los números de su tarjeta" name="cardNumber"
-        autocomplete="off" required="required">
+        autocomplete="off" required>
       <p id="result"></p>
     </div>
 
@@ -93,19 +94,19 @@
     <!-- Fecha de expiración -->
     <div class="grupo expira">
       <label for="dateExpire">Fecha de expiración<br></label>
-      <input type="month" id="dateExpire" placeholder="mes y año" name="dateExpire" required="required">
+      <input type="month" id="dateExpire" placeholder="mes y año" name="dateExpire" required>
     </div>
     <br>
 
     <!-- Codigo de seguridad -->
     <div class="grupo cvv">
       <label for="securityCode">Código de seguridad<br></label>
-      <input type="number" id="securityCode" name="securityCode" maxlength="3" autocomplete="off" required="required">
+      <input type="number" id="securityCode" name="securityCode" maxlength="3" autocomplete="off" required>
     </div>
 
     <!-- BOTON DE ENVIAR FORMULARIO -->
 
-    <button type="button" id="enviar" value="button">Enviar</button>
+    <button type="submit" id="enviar" value="button">Enviar</button>
   </form>
   <br>
 

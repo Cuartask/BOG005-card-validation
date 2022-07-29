@@ -4,7 +4,14 @@ import validator from './validator.js';
 let boton = document.getElementById("enviar");
 boton.addEventListener("click", enviarFormulario);
 
-function enviarFormulario() {
+function enviarFormulario(event) {
+    event.preventDefault();
+    if (!document.getElementById("formulario").checkValidity()){
+        document.getElementById("error").innerHTML = "Debes llenar todos los campos"
+    }
+    else {
+        document.getElementById("error").innerHTML = ""
+    }
     let creditCardNumber = document.getElementById("cardNumber").value;
     
     //AQUI VALIDO DE ACUERDO AL RESULTADO DE ISVALID SI ES VERDADERO O FALSO PARA INDICAR SI ES VALIDA O NO LA TARJETA DE CREDITO EN UN PARRAFO VERDE O ROJO
@@ -41,16 +48,16 @@ function limitSize(event, maxLength) {
 }
 
 // //Que al ingresar texto valida por medio de codigo ascii si son solo numeros de lo contrario no escribe los demas caracteres. 
-// cardNumber.addEventListener("keypress", onlyNumberKey);
+cardNumber.addEventListener("keypress", onlyNumberKey);
 
-// function onlyNumberKey(evt) {
+function onlyNumberKey(evt) {
           
 //     // Only ASCII character in that range allowed
-//     var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-//     if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
-//         evt.preventDefault();
-//     }
-// }
+let ASCIICode = (evt.which) ? evt.which : evt.keyCode
+ if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+    evt.preventDefault();
+   }
+ }
 
 
 

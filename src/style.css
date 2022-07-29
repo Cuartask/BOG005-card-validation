@@ -148,9 +148,15 @@ li{
     border-radius: 20px;
     position: relative;
     top: -480px;
-    margin: -10px 1em 0 800px;
+    margin: -50px 1em 0 900px;
     font-size: 22px;
     color: black;
+    font-weight: bold;  
+}
+
+h3{
+    font-size: 30px; 
+    color: red;
     font-weight: bold;  
 }
 
