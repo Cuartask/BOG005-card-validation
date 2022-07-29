@@ -151,6 +151,12 @@ li{
     margin: -10px 1em 0 800px;
     font-size: 22px;
     color: black;
+    font-weight: bold;  
+}
+
+p{
+    font-size: 30px; 
+    font-weight: bold;  
 }
 
 .tituloF{

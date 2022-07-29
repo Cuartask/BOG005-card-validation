@@ -34,7 +34,7 @@ let cardNumber = document.getElementById("cardNumber");
 cardNumber.addEventListener("keypress", (e) => limitSize(e, 15));
 
 function limitSize(event, maxLength) {
-    console.log(event.target.value);
+    //console.log(event.target.value);
     if(event.target.value.length > maxLength) {
         event.preventDefault();
     }
