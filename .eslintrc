@@ -1,6 +1,6 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
   },
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -8,6 +8,9 @@
   },
   "extends": "eslint:recommended",
   "rules": {
-    "no-console": "warn"
+    "linebreak-style": ["error", "windows"],
+    "quotes": [1, "single"]
+    
+    //"no-console": "warn"
   }
 }

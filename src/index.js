@@ -1,6 +1,6 @@
-import validator from './validator.js';  
-
-//funcion para que me guarde el valor digitado por el usuario en el input dentro de la variable creditCardNumber
+/*eslint-disable */
+import validator from './validator.js';
+/*funcion para que me guarde el valor digitado por el usuario en el input dentro de la variable creditCardNumber*/
 let boton = document.getElementById("enviar");
 boton.addEventListener("click", enviarFormulario);
 
@@ -13,8 +13,7 @@ function enviarFormulario(event) {
         document.getElementById("error").innerHTML = ""
     }
     let creditCardNumber = document.getElementById("cardNumber").value;
-    
-    //AQUI VALIDO DE ACUERDO AL RESULTADO DE ISVALID SI ES VERDADERO O FALSO PARA INDICAR SI ES VALIDA O NO LA TARJETA DE CREDITO EN UN PARRAFO VERDE O ROJO
+    /*AQUI VALIDO DE ACUERDO AL RESULTADO DE ISVALID SI ES VERDADERO O FALSO PARA INDICAR SI ES VALIDA O NO LA TARJETA DE CREDITO EN UN PARRAFO VERDE O ROJO*/
     let confirmValidator = document.getElementById("result");
     let resultValidator = validator.isValid(creditCardNumber);
     //confirmValidator.innerText = resultValidator;

@@ -1,3 +1,5 @@
+/*eslint-disable */
+
 //const { parse } = require("@babel/core");
 
 //cree un objeto y para formar la funcion isvalid pedi que en la variable numbers me guarde la cadena de caracteres convertidos en un array e invertilrlos 
