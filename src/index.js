@@ -47,12 +47,13 @@ function limitSize(event, maxLength) {
     }
 }
 
-// //Que al ingresar texto valida por medio de codigo ascii si son solo numeros de lo contrario no escribe los demas caracteres. 
+//Que al ingresar texto valida por medio de codigo ascii si son solo numeros de lo contrario 
+//no escribe los demas caracteres y que sea compatible con cualquier navegador
 cardNumber.addEventListener("keypress", onlyNumberKey);
 
 function onlyNumberKey(evt) {
           
-//     // Only ASCII character in that range allowed
+
 let ASCIICode = (evt.which) ? evt.which : evt.keyCode
  if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
     evt.preventDefault();
